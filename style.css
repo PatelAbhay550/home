@@ -1,0 +1,55 @@
+body{
+    background-color: black;
+}
+#blob{
+    height: 34vmax;
+    background-color: white;
+    aspect-ratio: auto 1 / 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: rotate 20s infinite;
+    opacity: 0.6;
+  
+
+}
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(12vmax);
+  }
+  h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(3rem, 10vw, 10rem);
+    color: white;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+    margin: 0rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    z-index: 3;
+    text-decoration: underline;
+  }
+
+h1:hover{
+    color: aquamarine;
+    text-decoration: wavy;
+    border: 1px solid black;
+    box-shadow: 0px 0px 15px grey;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: aquamarine;
+}
