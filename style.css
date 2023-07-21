@@ -1,1 +1,267 @@
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+        box-sizing: border-box;
+        user-select: none;
+    }
+
+    .main {
+        width: 100vw;
+        background-color: #E3F2FD;
+        height: 100vh;
+    }
+
+    .top {
+        width: 100vw;
+        height: 100px;
+        display: grid;
+        place-items: center;
+        background-color: #5372F0;
+        animation: down 0.3s;
+    }
+
+    @keyframes down {
+        0% {
+            transform: translateY(-50px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .top p {
+        font-size: 40px;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: transparent;
+        font-weight: 700;
+    }
+
+    .rightcont {
+        width: 700px;
+        height: 200px;
+        background-color: #5372F0;
+        margin-left: 45%;
+        margin-top: 50px;
+        animation: left 0.5s;
+    }
+
+    @keyframes left {
+        0% {
+            transform: translateX(8800px);
+        }
+    }
+
+    .rightcont img {
+        height: 100px;
+        background-color: transparent;
+        margin-left: 50px;
+    }
+
+    .rightcont .situ {
+        background-color: transparent;
+        font-weight: 700;
+        color: white;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 70px;
+    }
+
+    .nameandtemp p {
+        color: white;
+    }
+
+    .nameandtemp {
+        margin-left: 55%;
+
+        margin-top: -120px;
+    }
+
+    .name {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .temp,
+    .rain,
+    .humidity {
+        font-size: 30px;
+    }
+
+    .searchtab {
+
+        margin-left: 70px;
+        margin-top: -208px;
+        animation: right 0.7s;
+    }
+
+    @keyframes right {
+        0% {
+            transform: translateX(-700px);
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
+    }
+
+    .cname {
+        font-size: 20px;
+    }
+
+    .searchtab label {
+        font-weight: 700;
+    }
+
+    .searchtab input {
+        margin-top: 20px;
+        font-weight: 900;
+        text-align: center;
+        width: 250px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .searchtab .sbtn {
+        width: 250px;
+        height: 40px;
+        margin-top: 17px;
+        background-color: #5372F0;
+        border: none;
+        color: white;
+        font-size: 19px;
+        cursor: pointer;
+    }
+
+    .searchtab button:hover {
+        transform: scaleY(1.1);
+    }
+
+    .or {
+        margin-top: 15px;
+        color: grey;
+    }
+
+    .cbtn {
+        background-color: #6C757D;
+        color: white;
+        width: 250px;
+        height: 40px;
+        margin-top: 30px;
+        font-size: 19px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .cont {
+        margin-left: 45%;
+    }
+
+    .cont li {
+        list-style: none;
+    }
+
+    .df {
+        font-size: 30px;
+        animation: up 0.909s;
+        font-weight: 900;
+    }
+
+    .card {
+        display: flex;
+        gap: 50px;
+        
+    }
+    .c1{
+        animation: up 0.909s;
+    }
+    .c2{
+        animation: up 1.109s;
+    }
+    .c3{
+        animation: up 1.209s;
+    }
+    .c1,
+    .c2,
+    .c3 {
+
+        height: 160px;
+        width: 200px;
+        background-color: #6C757D;
+    }
+
+    li,
+    img {
+        margin-left: 30px;
+        font-size: 20px;
+        color: white;
+    }
+
+    @keyframes up {
+        0% {
+            transform: translateY(1000px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    /* Your existing CSS code here */
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+        background-color: #E3F2FD;
+    }
+    section{
+        min-height: 100vh;
+    }
+  .rightcont {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nameandtemp {
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .searchtab {
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+  }
+
+  .cont {
+    margin-left: 10%;
+    background-color: #E3F2FD;
+    display: grid;
+    place-items: center;
+  }
+
+  .card {
+    flex-direction: column;
+    background-color: #E3F2FD;
+    align-items: center;
+  }
+  .df{
+    margin-left: 10px;
+    margin-top: 70px;
+    
+  }
+
+  .c1,
+  .c2,
+  .c3 {
+    margin-bottom: 20px;
+  }
+}
 
