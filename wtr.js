@@ -26,6 +26,37 @@ const Loc = document.getElementById("name");
             .catch((error) => {
                 console.error(error);
             });
+                 fetch(`https://api.openweathermap.org/data/2.5/forecast?units=metric&q=${city}&appid=${apikey}`)
+            .then((response) => response.json())
+            .then((data) => {
+                updateForecastDisplay(data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
+
+    function updateForecastDisplay(data) {
+        const forecastList = data.list;
+
+        for (let i = 0; i < 3; i++) {
+            const forecast = forecastList[i * 8]; // Get the forecast for the next 24 hours
+
+            const date = new Date(forecast.dt * 1000);
+            const dateElement = document.querySelectorAll(".c" + (i + 1) + " li")[0];
+            dateElement.textContent = date.toLocaleDateString();
+
+            const tempElement = document.querySelectorAll(".c" + (i + 1) + " li")[1];
+            tempElement.textContent = "Temp: " + Math.round(forecast.main.temp) + "°C";
+
+            const rainElement = document.querySelectorAll(".c" + (i + 1) + " li")[2];
+            const rainPercentage = (forecast.rain && forecast.rain["3h"]) ? Math.min((forecast.rain["3h"] / 3) * 100, 100) : 0; // Ensure rain percentage doesn't go over 100%
+            rainElement.textContent = "Rain: " + rainPercentage.toFixed(1) + "%";
+
+            const humidityElement = document.querySelectorAll(".c" + (i + 1) + " li")[3];
+            humidityElement.textContent = "Humidity: " + forecast.main.humidity + "%";
+        }
+    
         }
         function updateForecastDisplay(data) {
         const forecastList = data.list;
