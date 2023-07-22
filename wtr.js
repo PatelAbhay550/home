@@ -41,7 +41,7 @@
             tempElement.textContent = "Temp: " + Math.round(forecast.main.temp) + "°C";
 
             const rainElement = document.querySelectorAll(".c" + (i + 1) + " li")[2];
-            const rainPercentage = (forecast.rain && forecast.rain["3h"]) ? (forecast.rain["3h"] / 3) * 100 : 0; // Calculate percentage of rain
+             const rainPercentage = (forecast.rain && forecast.rain["3h"]) ? Math.min((forecast.rain["3h"] / 3) * 100, 100) : 0; // Ensure rain percentage doesn't go over 100%
             rainElement.textContent = "Rain: " + rainPercentage.toFixed(1) + "%";
 
 
