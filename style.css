@@ -224,6 +224,7 @@
     margin: 20px auto;
     padding: 20px;
     display: flex;
+     font-size: 15px;
     flex-direction: column;
     align-items: center;
   }
